@@ -46,5 +46,3 @@ Updates the score with the specified ID.
 - Method: PUT
 - score_id: The ID of the score to be updated (integer)
 - Other parameters required for the update
-
-note : I didn't implement authentication because you asked me to keep it simple.
