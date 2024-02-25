@@ -22,6 +22,14 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def user_score(self, user):
+        try:
+            score = self.score_set.get(user=user)
+            return score.score
+        except Score.DoesNotExist:
+            return None
+
+
 
 class Score(models.Model):
     score = models.PositiveIntegerField(verbose_name='Score', validators=[MinValueValidator(0), MaxValueValidator(5)])

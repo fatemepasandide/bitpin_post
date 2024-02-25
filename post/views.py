@@ -3,6 +3,8 @@ from rest_framework import generics
 from post.models import Post, Score
 from post.serializers import PostSerializer, ScoreSerializer
 
+from rest_framework.response import Response
+
 
 class PostListView(generics.ListCreateAPIView):
     queryset = Post.objects.all()
